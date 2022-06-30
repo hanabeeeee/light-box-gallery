@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light box UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>Light Box Gallery</h2>
+    <!-- 이미지 목록 (썸네일) -->
+    <ul id="gallery">
+        <li><img src="images/01.jpg" alt="1"></li>
+        <li><img src="images/02.jpg" alt="2"></li>
+        <li><img src="images/03.jpg" alt="3"></li>
+        <li><img src="images/04.jpg" alt="4"></li>
+        <li><img src="images/05.jpg" alt="5"></li>
+    </ul>
+
+    <!--팝업 클릭하면 보임-->
+    <div id="lightbox">
+        <div class="box">
+            <img src="./images/01.jpg" alt="light box image">
+            <button id="closeBtn">X</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

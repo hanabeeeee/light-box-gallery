@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;}
+
+h2 {
+    margin-bottom: 3em;
+    font-size: 2.5em;
+    color: rgb(78, 78, 78);
+}
+
+#gallery {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#gallery > li {
+    width: 200px;
+    height: 120px;
+    background: #ccc;
+}
+
+#gallery > li > img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 2px 2px 6px rgb(100, 100, 100);
+}
+
+/* li hover */
+#gallery > li:hover {
+    cursor: pointer;
+    outline: 2px solid beige;
+}
+
+/*기본적으로 안보임*/
+#lightbox {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.624);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+} 
+
+/*보임*/
+#lightbox.on {
+    display: flex;
+}
+
+#lightbox .box {
+    position: relative;
+    /*outline: 2px solid red;*/
+}
+
+#lightbox .box #closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#closeBtn {
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    color: pointer;
+}
